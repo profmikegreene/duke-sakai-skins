@@ -24,6 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        with:
-          source-dir: dist/20.x
-          target-branch: dukedev
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com 
+          git checkout dukedev
+          git checkout master -- dist/20.x
+          git add dist/20.x
+          git commit -m "updating dukedev from master:dist/20.x"
+          git push origin dukedev
