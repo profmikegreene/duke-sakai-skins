@@ -1,7 +1,7 @@
 /* tool-base.css  - base values - focus on positioning, margins, paddings 
 - all skins can participate in these shared definitions 
 - and still style things differently in their skin*/
-@media print  {
+@media print {
    body {
 	font-size: 9pt !important;
 	margin: 0 !important;
